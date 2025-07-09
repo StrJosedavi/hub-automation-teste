@@ -397,7 +397,12 @@ export default function ProjectsPage() {
                       {project.passedTests} passaram
                     </span>
                   </div>
-                  <Progress value={getSuccessRate(project)} />
+                  <div className="relative h-2 w-full overflow-hidden rounded-full bg-secondary">
+                    <div
+                      className="h-full bg-green-500 transition-all"
+                      style={{ width: `${getSuccessRate(project)}%` }}
+                    />
+                  </div>
 
                   <div className="flex justify-between items-center text-sm">
                     <span className="text-muted-foreground">

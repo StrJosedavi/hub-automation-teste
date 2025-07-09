@@ -31,6 +31,7 @@ export default function DashboardPage() {
     failedTests: 8,
     pendingTests: 6,
     successRate: 91.2,
+    failureRate: 5.1,
     avgExecutionTime: 2.4,
     testsToday: 45,
     activeProjects: 3,
@@ -100,7 +101,12 @@ export default function DashboardPage() {
               <div className="text-2xl font-bold text-green-600">
                 {metrics.successRate}%
               </div>
-              <Progress value={metrics.successRate} className="mt-2" />
+              <div className="relative h-2 w-full overflow-hidden rounded-full bg-secondary mt-2">
+                <div
+                  className="h-full bg-green-500 transition-all"
+                  style={{ width: `${metrics.successRate}%` }}
+                />
+              </div>
             </CardContent>
           </Card>
 
@@ -133,7 +139,13 @@ export default function DashboardPage() {
               <div className="text-2xl font-bold text-red-600">
                 {metrics.failedTests}
               </div>
-              <div className="flex items-center gap-1 text-xs text-red-600">
+              <div className="relative h-2 w-full overflow-hidden rounded-full bg-secondary mt-2">
+                <div
+                  className="h-full bg-red-500 transition-all"
+                  style={{ width: `${metrics.failureRate}%` }}
+                />
+              </div>
+              <div className="flex items-center gap-1 text-xs text-red-600 mt-1">
                 <TrendingDown className="w-3 h-3" />
                 -2 desde ontem
               </div>
@@ -168,7 +180,12 @@ export default function DashboardPage() {
                     <span>Testes: 45</span>
                     <span className="text-green-600">40 passaram</span>
                   </div>
-                  <Progress value={88.9} />
+                  <div className="relative h-2 w-full overflow-hidden rounded-full bg-secondary">
+                    <div
+                      className="h-full bg-green-500 transition-all"
+                      style={{ width: `88.9%` }}
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -182,7 +199,12 @@ export default function DashboardPage() {
                     <span>Testes: 28</span>
                     <span className="text-green-600">26 passaram</span>
                   </div>
-                  <Progress value={92.9} />
+                  <div className="relative h-2 w-full overflow-hidden rounded-full bg-secondary">
+                    <div
+                      className="h-full bg-green-500 transition-all"
+                      style={{ width: `92.9%` }}
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -196,7 +218,12 @@ export default function DashboardPage() {
                     <span>Testes: 18</span>
                     <span className="text-green-600">16 passaram</span>
                   </div>
-                  <Progress value={88.9} />
+                  <div className="relative h-2 w-full overflow-hidden rounded-full bg-secondary">
+                    <div
+                      className="h-full bg-green-500 transition-all"
+                      style={{ width: `88.9%` }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>

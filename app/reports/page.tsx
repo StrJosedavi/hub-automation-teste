@@ -8,7 +8,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -180,7 +179,12 @@ export default function ReportsPage() {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{metrics.successRate}%</div>
-              <Progress value={metrics.successRate} className="mt-2" />
+              <div className="relative h-2 w-full overflow-hidden rounded-full bg-secondary mt-2">
+                <div
+                  className="h-full bg-green-500 transition-all"
+                  style={{ width: `${metrics.successRate}%` }}
+                />
+              </div>
             </CardContent>
           </Card>
 
@@ -240,7 +244,12 @@ export default function ReportsPage() {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{metrics.coverage}%</div>
-              <Progress value={metrics.coverage} className="mt-2" />
+              <div className="relative h-2 w-full overflow-hidden rounded-full bg-secondary mt-2">
+                <div
+                  className="h-full bg-green-500 transition-all"
+                  style={{ width: `${metrics.coverage}%` }}
+                />
+              </div>
             </CardContent>
           </Card>
         </div>
@@ -303,10 +312,12 @@ export default function ReportsPage() {
                       </span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Progress
-                        value={category.successRate}
-                        className="flex-1"
-                      />
+                      <div className="relative h-2 flex-1 overflow-hidden rounded-full bg-secondary">
+                        <div
+                          className="h-full bg-green-500 transition-all"
+                          style={{ width: `${category.successRate}%` }}
+                        />
+                      </div>
                       <span className="text-sm font-medium w-12">
                         {category.successRate}%
                       </span>
