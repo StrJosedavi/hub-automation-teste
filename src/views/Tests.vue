@@ -1,6 +1,14 @@
 <script setup lang="ts">
 import Navigation from '../components/Navigation.vue'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui'
+import Card from '../components/ui/Card.vue'
+import CardContent from '../components/ui/CardContent.vue'
+import CardDescription from '../components/ui/CardDescription.vue'
+import CardHeader from '../components/ui/CardHeader.vue'
+import CardTitle from '../components/ui/CardTitle.vue'
+
+defineOptions({
+  name: 'TestsView',
+})
 </script>
 
 <template>

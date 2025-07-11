@@ -1,5 +1,5 @@
 <template>
-  <div :class="cn('rounded-lg border bg-card text-card-foreground shadow-sm', className)">
+  <div :class="cn('p-6 pt-0', className)">
     <slot />
   </div>
 </template>
@@ -14,6 +14,6 @@ interface Props {
 defineProps<Props>()
 
 defineOptions({
-  name: 'UiCard',
+  name: 'UiCardContent',
 })
 </script>

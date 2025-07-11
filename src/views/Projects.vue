@@ -1,22 +1,22 @@
 <script setup lang="ts">
+defineOptions({ name: 'ProjectsView' })
 import { ref, computed } from 'vue'
 import Navigation from '../components/Navigation.vue'
-import { Button } from '../components/ui'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/Card'
-import { Badge } from '../components/ui'
+import Button from '../components/ui/Button.vue'
+import Card from '../components/ui/Card.vue'
+import CardContent from '../components/ui/CardContent.vue'
+import CardHeader from '../components/ui/CardHeader.vue'
+import CardTitle from '../components/ui/CardTitle.vue'
+import Badge from '../components/ui/Badge.vue'
 import {
   Plus,
-  Settings,
   MoreHorizontal,
-  Edit,
-  Trash2,
   Globe,
   Smartphone,
   Monitor,
   Activity,
   CheckCircle,
   XCircle,
-  Eye,
   Target,
 } from 'lucide-vue-next'
 
@@ -133,17 +133,18 @@ const handleCreateProject = () => {
   console.log('Criar novo projeto')
 }
 
-const handleEditProject = (project: Project) => {
-  console.log('Editar projeto:', project.name)
-}
+// Funções para uso futuro (não implementadas ainda)
+// const handleEditProject = (project: Project) => {
+//   console.log('Editar projeto:', project.name)
+// }
 
-const handleViewTests = (project: Project) => {
-  console.log('Visualizar testes:', project.name)
-}
+// const handleViewTests = (project: Project) => {
+//   console.log('Visualizar testes:', project.name)
+// }
 
-const handleDeleteProject = (projectId: string) => {
-  console.log('Excluir projeto:', projectId)
-}
+// const handleDeleteProject = (projectId: string) => {
+//   console.log('Excluir projeto:', projectId)
+// }
 </script>
 
 <template>

@@ -1,7 +1,7 @@
 <template>
-  <div :class="cn('rounded-lg border bg-card text-card-foreground shadow-sm', className)">
+  <p :class="cn('text-sm text-muted-foreground', className)">
     <slot />
-  </div>
+  </p>
 </template>
 
 <script setup lang="ts">
@@ -14,6 +14,6 @@ interface Props {
 defineProps<Props>()
 
 defineOptions({
-  name: 'UiCard',
+  name: 'UiCardDescription',
 })
 </script>
