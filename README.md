@@ -1,61 +1,29 @@
-# .
+# Gerenciador de Testes Simples
 
-This template should help get you started developing with Vue 3 in Vite.
+Este projeto é uma aplicação web para gerenciamento de testes, inspirada no TestLink, porém com foco em simplicidade e facilidade de uso.
 
-## Recommended IDE Setup
+## Objetivo
+Permitir que equipes de QA e desenvolvedores organizem, executem e acompanhem casos de teste de forma prática, sem burocracia.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Funcionalidades
+- Cadastro e organização de projetos de teste
+- Criação e edição de casos de teste
+- Execução de testes e registro de resultados
+- Relatórios simples de execução
+- Interface intuitiva e responsiva
 
-## Type Support for `.vue` Imports in TS
+## Como usar
+1. Clone o repositório
+2. Instale as dependências com `npm install`
+3. Inicie o projeto com `npm run dev`
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## Tecnologias
+- Vue.js 3
+- Vite
+- Typescript
 
-## Customize configuration
+## Motivação
+Ferramentas como TestLink são robustas, mas podem ser complexas para times pequenos ou projetos rápidos. Este gerenciador busca ser direto, leve e fácil de adotar.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
-
-```sh
-npm run test:e2e:dev
-```
-
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
-
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
-
-```sh
-npm run build
-npm run test:e2e
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+## Licença
+MIT

@@ -1,29 +1,21 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
+import Home from '../views/Home.vue';
+import NotFound from '../views/NotFound.vue';
+import Dashboard from '../views/Dashboard.vue';
+import About from '../views/About.vue';
+import Projects from '../views/Projects.vue';
+import Reports from '../views/Reports.vue';
+import Tests from '../views/Tests.vue';
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+export const router = createRouter({
+  history: createWebHistory('/'),
   routes: [
-    {
-      path: '/',
-      name: 'dashboard',
-      component: () => import('../views/Dashboard.vue'),
-    },
-    {
-      path: '/projects',
-      name: 'projects',
-      component: () => import('../views/Projects.vue'),
-    },
-    {
-      path: '/reports',
-      name: 'reports',
-      component: () => import('../views/Reports.vue'),
-    },
-    {
-      path: '/tests',
-      name: 'tests',
-      component: () => import('../views/Tests.vue'),
-    },
+    { path: '/', component: Home },
+    { path: '/dashboard', component: Dashboard },
+    { path: '/About', component: About },
+    { path: '/Projects', component: Projects },
+    { path: '/Reports', component: Reports },
+    { path: '/Tests', component: Tests },
+    { path: '/:pathMatch(.*)*', component: NotFound }
   ],
-})
-
-export default router
+});

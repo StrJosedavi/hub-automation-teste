@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+:root {
+  background-color: #191919;
+}
+
+#app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

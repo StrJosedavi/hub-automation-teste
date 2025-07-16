@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen">
 
-    
+    AJUDA
   </div>
 </template>
 
